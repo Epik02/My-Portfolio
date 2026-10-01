@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethan Brogly's Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    /* Header section */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: white;
+      padding: 30px 40px;
+      text-align: left;
+    }
+
+    .profile-text h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .profile-text p {
+      margin: 8px 0 0;
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    /* Tabs */
+    header {
+      background: #1f2937;
+      padding: 0 40px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: flex-start;
+      gap: 8px;
+      max-width: 900px;
+      margin: 0;
+    }
+
+    .tab-button {
+      border: none;
+      background: transparent;
+      color: #d1d5db;
+      padding: 18px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .tab-button:hover {
+      background: #374151;
+      color: white;
+    }
+
+    .tab-button.active {
+      background: #2563eb;
+      color: white;
+    }
+
+    /* Main content */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tab-content {
+      display: none;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content h2 {
+      margin-top: 0;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 600px) {
+      .profile-header {
+        padding: 25px 20px;
+      }
+
+      header {
+        padding: 0 20px;
+      }
+
+      main {
+        padding: 0 20px;
+      }
+
+      .profile-image {
+        width: 80px;
+        height: 80px;
+      }
+
+      .profile-text h1 {
+        font-size: 25px;
+      }
+
+      .profile-text p {
+        font-size: 16px;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+      }
+
+      .tab-button {
+        padding: 15px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Image on the left, title and subtitle on the right -->
+  <section class="profile-header">
+
+    <div class="profile-text">
+      <h1>Ethan Brogly</h1>
+      <p>Game Programmer</p>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <header>
+    <nav class="tabs">
+      <button class="tab-button active" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="about">Projects</button>
+      <button class="tab-button" data-tab="services">Resume</button>
+    </nav>
+  </header>
+
+  <!-- Tab content -->
+  <main>
+    <section id="home" class="tab-content active">
+      <h2>Home</h2>
+      <p style="font-size: 20px; line-height: 1.6;">My name is Ethan Brogly and I appreciate you taking time to review my portfolio.<br><br>
+</p>
+
+<img src="BizarRPG_Cave.png" alt="Description" width="397" height="228">
+<img src="meat_cut_img.png" alt="Description" width="397" height="228"><br><br>
+
+<p style="font-size: 20px; line-height: 1.6;">
+What I hope is evident from my portfolio is my passion for video games and game dev.
+Although I am at the beginning of my career in this industry, I bring determination, a
+strong work ethic, and a commitment to continuous learning. I am a creative individual
+with strong problem-solving and communication skills, and I have experience working
+with C#, C++, and the Unity game engine. I understand the importance of collaboration
+and thrive in team environments, to work closely with colleagues to contribute
+ideas, support shared goals, and to deliver successful projects.
+</p>
+    </section>
+
+    <section id="about" class="tab-content">
+      <h2>BizaRPG (Unity)</h2>
+      <p style="font-size: 20px; line-height: 1.2;">BizaRPG is a turn-based RPG I am developing independently in Unity. I programmed the game and created the art in Aseprite. The game takes place in a bizarre world that has been linked together with mysterious portals letting the player travel between different universes and time periods. The game was inspired by Dragon Quest IX on the DS. The game includes:
+<br><br>
+<img src="combatsmaller.gif" alt="Description" width="390" height="225" style="float: right; margin-left: 20px;">
+-An open world you can freely explore<br>
+-Dialogue System that lets you talk to NPC’s and ask them questions<br>
+-Turn based combat against up to 4 enemies.<br>
+-Full party and armor customization using Unity animation controllers. Armor and weapons also have stats that affect combat.<br>
+-Inventory and shop systems<br>
+-Questing system<br><br>
+<img src="ccsmaller.gif" alt="Description" width="397" height="228">
+<img src="world.gif" alt="Description" width="397" height="228"><br><br>
+
+<h2>Meat and Poultry Ontario VR game (Unity)</h2>
+<p style="font-size: 20px; line-height: 1.2;">
+As an intern at Meat and Poultry Ontario, I was a programmer on a VR educational game designed to encourage new people to join the meat processing industry, and to further develop and educate them on health standards and meat cutting techniques. The game has players following voiced steps on how to properly cut meat as well as sanitation procedures. If a player makes a mistake, they have to repeat their attempt. The player can cut the meat with the knife at any point, and it will cut the object creating two smaller gameobjects.<br><br>
+
+<img src="laghands.gif" alt="Description" width="390" height="225">
+<img src="cutmeatsmall.gif" alt="Description" width="390" height="225"><br>
+</p>
+
+<h2>What Romaines of Kolonel Korn (Unity)</h2>
+<p style="font-size: 20px; line-height: 1.2;">
+What Romaines of Kolonel Korn is a wave-based zombie shooter inspired by Call of Duty Zombies. The game has players exploring a farm, and fighting mutant vegetable zombies for points they can use around the map. Players can use these points on doors to open new areas, guns or perks to power up. I worked as a programmer on this game primarily focusing on enemy pathfinding and buyables around the map.<br><br> 
+<img src="zombiesmall1.gif" alt="Description" width="390" height="225">
+<img src="zombiesmall2.gif" alt="Description" width="390" height="225"><br>
+
+The game is available on itch.io <a href="https://milenanovakovic.itch.io/what-romaines-of-kolonel-korn">here</a>
+</p>
+
+<h2>Frog Frontier (C++)</h2>
+<p style="font-size: 20px; line-height: 1.2;">Frog Frontier is a sidescrolling platformer, inspired by early mobile running games like Line Runner. You play as a ladybug going through multiple levels dodging obstacles by flying and crouching in an attempt to escape the frog chasing you. The game features:<br><br>
+-High speed platforming which requires players to fly, jump and crouch their way around obstacles<br>
+-Menu System letting players choose their level, pause the game or quit<br>
+-Animations that change depending on the player's inputs<br><br>
+<img src="ff.gif" alt="Description" width="397" height="228">
+<img src="ff2.png" alt="Description" width="387" height="228"><br><br>
+
+The game is available on <a href="https://jakerc100.itch.io/frog-frontier">itch.io</a>
+</p>
+
+<h2>Grim's Overlook (C++)</h2>
+<p style="font-size: 20px; line-height: 1.2;">
+Grim's Overlook is an adventure horror game I was a programmer on. The game takes place in the gloomy town of Grim’s Overlook. After receiving an alarming letter, Oliver goes to the town to see his mother only to find it abandoned. The game has players exploring the town, collecting items, and solving puzzles to progress. The player will have to utilize their flashlight efficiently in order to navigate the dark town.<br><br> 
+<img src="grimsoverlook1.png" alt="Description" width="390" height="225">
+<img src="grimsoverlook2.png" alt="Description" width="390" height="225"><br>
+
+The game is available on itch.io <a href="https://muggumz.itch.io/grims-overlook">here</a>
+</p>
+
+    </section>
+
+    <section id="services" class="tab-content">
+      <h2>Resume</h2>
+<iframe 
+  src="resume.pdf" 
+  width="100%" 
+  height="600px" 
+  style="border: none;">
+</iframe>
+
+    </section>
+
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const tabName = button.dataset.tab;
+
+        tabButtons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+        tabContents.forEach(content => {
+          content.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        document.getElementById(tabName).classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
